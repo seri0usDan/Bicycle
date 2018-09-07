@@ -1,0 +1,642 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 18px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	background: #f7f7f7
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+.wrapper
+	max-width: 1600px
+	margin: auto
+
+li
+	list-style-type: none
+
+a, a:link, a:hover
+	text-decoration: none
+
+.header-section
+	position: relative
+	height: 100vh
+	background-image: url("../img/header-section/bg.jpg")
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+
+.hamburger
+	position: absolute
+	top: 40px
+	right: 40px
+	display: none
+	&:focus
+		outline: none
+
+.main-nav_list
+	display: flex
+	justify-content: space-between
+	align-items: center
+	text-transform: uppercase
+	max-width: 620px
+	margin: auto
+	padding-top: 35px
+	transition: transform .4s ease
+	padding-left: 0
+	span
+		user-select: none
+
+.main-nav_list-item-link
+	color: #4d4959
+	font-size: 13px
+	font-weight: bold
+	position: relative
+	&:after
+		content: ""
+		background-color: $accent
+		position: absolute
+		width: 0%
+		height: 2px
+		top: calc(100% + 3px)
+		left: 50%
+	&:hover
+		color: $accent
+		transition: color .4s ease
+		&:after
+			width: 110%
+			left: -5%
+			transition: all .25s ease
+
+.main-nav .show
+	transform: translateY(0)
+
+.about-section
+	text-align: center
+	background: #f7f7f7
+
+.about-section_heading
+	color: #353738
+	font-weight: bold
+	margin: 0
+	font-size: 18px
+	padding-top: 35px
+
+.about-section_text
+	box-sizing: border-box
+	line-height: 34px
+	max-width: 1080px 
+	margin: auto
+	padding-top: 35px
+	padding-bottom: 145px
+	padding-left: 20px
+	padding-right: 20px
+
+.about-section_icon
+	padding-top: 120px
+
+.work-section
+	background: #fff
+	.wrapper
+		max-width: 1920px
+
+.work-section_grid-container
+	display: grid
+	grid-template-columns: repeat(3, minmax(400px, 700px))
+	grid-template-rows: repeat(9, 200px)
+	background: #fff
+
+.cell1
+	background-image: url("../img/work-section/1.jpg")
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+	display: flex
+	align-items: center
+	justify-content: center
+	grid-column-end: span 2
+	grid-row-end: span 3 
+
+.cell2
+	text-align: center
+	grid-row-end: span 2
+	position: relative
+	.cell-icon
+		padding-top: 70px
+	.cell-heading
+		font-weight: bold
+		color: #353738
+		padding-top: 30px
+		margin: 0
+		line-height: 1
+		font-size: 18px
+		text-transform: uppercase
+	.cell-text
+		padding-top: 25px
+		max-width: 405px
+		font-size: 16px
+		margin: auto
+		text-align: left
+		padding-left: 20px
+		padding-right: 20px
+	&:before
+		content: ""
+		background: #d7d7d7
+		width: 50px
+		height: 1px
+		position: absolute
+		bottom: 50px
+		left: calc(50% - 25px)
+	&:after
+		content: ""
+		width: 0px
+		height: 0px
+		border-left: 10px solid transparent
+		border-right: 10px solid transparent
+		border-top: 10px solid #fff
+		position: absolute
+		top: 100%
+		left: calc(50% - 5px)
+
+
+.cell3
+	background-image: url("../img/work-section/3.jpg")
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+
+.cell4
+	text-align: center
+	grid-row-end: span 2
+	position: relative
+	.cell-icon
+		padding-top: 70px
+	.cell-heading
+		font-weight: bold
+		color: #353738
+		padding-top: 30px
+		margin: 0
+		line-height: 1
+		font-size: 18px
+		text-transform: uppercase
+	.cell-text
+		padding-top: 25px
+		max-width: 405px
+		font-size: 16px
+		margin: auto
+		text-align: left
+		padding-left: 20px
+		padding-right: 20px
+	&:before
+		content: ""
+		background: #d7d7d7
+		width: 50px
+		height: 1px
+		position: absolute
+		bottom: 50px
+		left: calc(50% - 25px)
+	&:after
+		content: ""
+		width: 0px
+		height: 0px
+		border-left: 10px solid transparent
+		border-right: 10px solid transparent
+		border-top: 10px solid #fff
+		position: absolute
+		top: 100%
+		left: calc(50% - 5px)
+
+
+.cell5
+	grid-column-start: 1
+	background-image: url("../img/work-section/5.jpg")
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+
+.cell6
+	background-image: url("../img/work-section/6.jpg")
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+	display: flex
+	align-items: center
+	justify-content: center
+	grid-column: 2 / span 2
+	grid-row: 4 / span 3 
+
+.cell7
+	background-image: url("../img/work-section/7.jpg")
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+	display: flex
+	align-items: center
+	justify-content: center
+	grid-column-start: 1
+	grid-row: 7 / span 3 
+
+.cell8
+	text-align: center
+	grid-row-end: span 2
+	position: relative
+	.cell-icon
+		padding-top: 70px
+	.cell-heading
+		font-weight: bold
+		color: #353738
+		padding-top: 30px
+		margin: 0
+		line-height: 1
+		font-size: 18px
+		text-transform: uppercase
+	.cell-text
+		padding-top: 25px
+		max-width: 405px
+		font-size: 16px
+		margin: auto
+		text-align: left
+		padding-left: 20px
+		padding-right: 20px
+	&:before
+		content: ""
+		background: #d7d7d7
+		width: 50px
+		height: 1px
+		position: absolute
+		bottom: 50px
+		left: calc(50% - 25px)
+	&:after
+		content: ""
+		width: 0px
+		height: 0px
+		border-left: 10px solid transparent
+		border-right: 10px solid transparent
+		border-top: 10px solid #fff
+		position: absolute
+		top: 100%
+		left: calc(50% - 5px)
+
+.cell9
+	grid-row-end: 10
+	background-image: url("../img/work-section/9.jpg")
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+
+.cell10
+	background-image: url("../img/work-section/10.jpg")
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+	grid-column-start: 3
+	grid-row: 7 / span 3
+
+.testimonials-section
+	background-color: #f7f7f7
+	.wrapper
+		padding-top: 120px
+
+.testimonials-section_carousel
+	text-align: center
+
+.owl-carousel
+	.owl-item
+		.testimonials-section_carousel_el-icon
+			width: 43px
+			display: inline-block
+			margin: auto
+
+.testimonials-section_carousel_el-heading
+	color: #353738
+	margin: 0
+	padding-top: 35px
+	line-height: 1
+	&-time
+		font-weight: 300
+		color: #848789
+		padding-left: 10px
+		letter-spacing: 2px
+
+.testimonials-section_carousel_el-text
+	box-sizing: border-box
+	font-size: 24px
+	font-style: italic
+	max-width: 1070px
+	line-height: 30px
+	margin: auto
+	padding-top: 30px
+	padding-left: 15px
+	padding-right: 15px
+	color: #848789
+
+.owl-dots
+	padding-top: 90px
+	padding-bottom: 70px
+
+.owl-carousel button.owl-dot
+	width: 10px
+	height: 10px
+	border-radius: 50%
+	border: 1px solid #a9afb3
+	margin-right: 9px
+	outline: none
+	&:last-child
+		margin: 0
+	
+.owl-carousel .owl-dots .active
+	background-color: #a9afb3
+
+.shop-section
+	background: #fff
+	.wrapper
+		max-width: 1920px
+
+.shop-section_grid-container
+	display: grid
+	grid-template-columns: repeat(6, minmax(200px, 500px))
+	grid-template-rows: repeat(2, minmax(230px, 270px))
+
+.shop-cell1, .shop-cell2, .shop-cell3, .shop-cell4, .shop-cell5, .shop-cell6, .shop-cell7, .shop-cell8
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+	position: relative
+
+	&:hover .shop-cell-onHover
+		opacity: 1
+		z-index: 2
+
+.shop-cell1
+	background-image: url("../img/shop-section/1.jpg")
+	grid-row: 1 / 2
+	grid-column: 1 / 2 
+
+.shop-cell2
+	background-image: url("../img/shop-section/2.jpg")
+	grid-row: 1 / 2
+	grid-column: 2 / 3 
+
+.shop-cell3
+	background-image: url("../img/shop-section/3.jpg")
+	grid-row: 2 / 3
+	grid-column: 1 / 3 
+
+.shop-cell4
+	background-image: url("../img/shop-section/4.jpg")
+	grid-row: 1 / 3
+	grid-column: 3 / 4
+
+.shop-cell5
+	background-image: url("../img/shop-section/5.jpg")
+	grid-row: 1 / 3
+	grid-column: 4 / 5
+
+
+.shop-cell6
+	background-image: url("../img/shop-section/6.jpg")
+	grid-row: 1 / 2
+	grid-column: 5 / 7
+
+.shop-cell7
+	background-image: url("../img/shop-section/7.jpg")
+
+.shop-cell8
+	background-image: url("../img/shop-section/8.jpg")
+
+.shop-cell-onHover
+	opacity: 0
+	z-index: -2
+	display: flex
+	align-items: center
+	justify-content: center
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	background: rgba(92, 167, 141, .8)
+	transition: opacity .3s ease
+
+.shop-cell-onHover-content
+	display: flex
+	align-items: center
+	flex-direction: column
+	position: relative
+
+
+
+.toShop
+	text-transform: uppercase
+	font-size: 14px
+	font-weight: bold
+	color: #f5faf8
+	margin-top: 10px
+	padding: 5px
+	
+	&:after
+		content: ''
+		width: 0px
+		height: 1px
+		background: #f5faf8
+		opacity: .7 
+		position: absolute
+		top: 29px
+		right: 27px
+	&:hover
+		color: #FF6F69
+		text-shadow: 1px 1px 15px rgba(0,0,0, .1)
+	&:hover:after
+		width: 70px
+		transition: all 1s ease
+
+
+
+
+.shop-section_discover
+	text-align: center
+	background-color: #282f35
+
+.shop-section_discover-button
+	margin-top: 75px
+	margin-bottom: 75px
+	border: 1px solid #94979a
+	background: transparent
+	font-size: 14px
+	font-weight: bold
+	color: #f1f1f2
+	cursor: pointer
+	line-height: 50px
+	width: 300px
+	box-sizing: border-box
+	outline: non
+	border-radius: 0
+	&:focus
+		outline: none
+	&:hover
+		background: #64C29E
+		color: #f1f1f2
+		transition: .3s ease
+
+.mailing-section
+	display: flex
+	flex-direction: column
+	align-items: center
+	background: #fff
+	.logo
+		padding-top: 105px
+	
+.mailing-section_heading
+	font-size: 24px
+	font-style: italic
+	color: #848789
+	padding-top: 40px
+
+.mailing-section_input
+	padding-top: 38px
+	padding-bottom: 110px
+	display: flex
+	align-items: start
+
+.mailing-section_input-email
+	height: 70px
+	width: 400px
+	border: 1px solid #d3d7d9
+	padding-left: 25px
+	&::placeholder
+		line-height: 68px
+		font-size: 20px
+		color: #929292
+
+.mailing-section_input-submitBtn
+	height: 70px
+	width: 125px
+	text-align: center
+	line-height: 70px
+	background: #64c29e
+	color: #fff
+	border: 0
+	outline: none
+	margin-left: 8px
+	cursor: pointer
+	padding: 0
+	&:hover
+		color: #FF6F69
+		transition: .2s ease
+
+.footer-section
+	padding-top: 100px
+	padding-bottom: 105px
+	padding-left: 15px
+	padding-right: 15px
+	position: relative
+	background: #f7f7f7
+	.wrapper
+		max-width: 1100px
+		display: flex
+		justify-content: space-between
+		align-items: flex-end
+	small
+		position: absolute
+		bottom: 0
+		left: calc(50% - 62px)
+
+
+.footer-section_adresses-text
+	font-size: 14px
+	font-style: italic
+	margin: 0
+	.state
+		font-weight: bold
+		font-size: 16px
+
+.footer-section_socials
+	display: flex
+	a
+		display: inline-block
+		width: 35px
+		height: 35px
+		border-radius: 50%
+		display: flex
+		align-items: center
+		justify-content: center
+		margin-right: 15px
+		margin-bottom: 3px
+		&:last-item
+			margin: 0
+	img
+		width: auto
+		height: 46%
+		color: #fff
+
+.socials-twitter
+	background: #78cdf0
+
+.socials-facebook
+	background: #537bbd
+
+.socials-pinterest
+	background: #eb5755
+	
+.up-button 
+	width: 50px
+	height: 50px
+	border-radius: 50%
+	background-color: #ccc
+	display: flex
+	align-items: center
+	justify-content: center
+	box-shadow: 1px 2px 15px rgba(0,0,0, .1)
+	z-index: 12
+	cursor: pointer
+	position: fixed
+	right: -100%
+	bottom: 25px
+	transition: all .6s ease
+	&:hover
+		opacity: 1
+		transition: .3s ease
+		background-color: rgba(100, 194, 158, .8)
+
+.active
+	right: 25px
+
+
+
+
+
+
+
+
+@import "media" // Always at the end
