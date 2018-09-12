@@ -37,7 +37,6 @@
 		grid-row: 4 / 5
 
 @media only screen and (max-width: 950px)
-	
 	.about-section_text
 		font-size: 16px
 
@@ -57,7 +56,6 @@
 		font-size: 18px
 
 @media only screen and (max-width: 750px)
-
 	.hamburger
 		display: inline-block
 
@@ -73,7 +71,7 @@
 		transform: translateY(-100%)
 		.logo
 			order: -1
-			margin-top:  135px
+			margin-top:  30px
 			margin-bottom: 50px
 		span
 			display: none
@@ -122,7 +120,7 @@
 			max-width: 550px
 
 	.shop-section_grid-container
-		grid-template-columns: repeat(2, minmax(200px, 450px))
+		grid-template-columns: repeat(2, minmax(160px, 450px))
 		grid-template-rows: repeat(6, minmax(200px, 450px))
 
 	.shop-cell4
@@ -158,8 +156,6 @@
 			font-size: 20px
 			line-height: 20px
 
-
-
 @media only screen and (max-width: 650px)
 	.about-section_text
 		text-align: left
@@ -194,15 +190,41 @@
 		width: 75px
 
 @media only screen and (max-width: 450px)
+	.hamburger 
+		top: 20px
+		right: 5px
+
+	.hamburger-inner, .hamburger-inner:before, .hamburger-inner:after
+		width: 30px
+		height: 3px
+
+	.hamburger-inner:before 
+		top: -7px
+		
+	.hamburger--collapse .hamburger-inner:after 
+		top: -14px
+
 	.about-section_heading
-		font-size: 15px
+		font-size: 14px
 
 	.about-section_text
 		font-size: 12px
 		text-align: left
+		padding-top: 20px
+		padding-right: 15px
+		padding-bottom: 70px
+		line-height: inherit
 
 	.about-section_icon
 		width: 40px
+		padding-top: 50px
+
+	.work-section_grid-container
+			grid-template-columns: minmax(320px, 750px)
+
+	.shop-section_discover-button
+		width: 190px
+		font-size: 13px
 
 	.cell2, .cell4, .cell8
 		.cell-heading
@@ -211,11 +233,11 @@
 		.cell-text
 			font-size: 12px
 		.cell-icon
-			width: 40px
+			width: 35px
 
 	.cell1, .cell6, .cell7
 		img
-			width: 130px
+			width: 100px
 		
 	.owl-carousel .owl-item .testimonials-section_carousel_el-icon
 		width: 32px
@@ -224,7 +246,28 @@
 		font-size: 16px
 		
 	.testimonials-section_carousel_el-text
-		font-size: 15px
+		font-size: 12px
 		text-align: left
+		line-height: 1.65
+	.mailing-section_input-email
+		width: 200px
+		&::placeholder
+			font-size: 13px
+			line-height: 55px
 
+	.mailing-section_input-submitBtn
+		width: 60px
+		font-size: 13px
 	
+	.up-button
+		width: 35px
+		height: 35px
+		img
+			width: 25px
+	
+	.footer-section
+		span
+			font-size: 13px
+		a 
+			width: 27px
+			height: 27px
