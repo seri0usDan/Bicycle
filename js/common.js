@@ -1,8 +1,8 @@
 $(window).scroll(function() {
 	if ( $(this).scrollTop() > $(this).height() ) {
-		$(".up-button").addClass(" active")
+		$(".up-button").addClass(" up-button_active")
 	} else {
-		$(".up-button").removeClass(" active")
+		$(".up-button").removeClass(" up-button_active")
 	}
 });
 
