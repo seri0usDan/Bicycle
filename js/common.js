@@ -1,14 +1,16 @@
-$(window).scroll(function() {
-	if ( $(this).scrollTop() > $(this).height() ) {
-		$(".up-button").addClass(" up-button_active")
-	} else {
-		$(".up-button").removeClass(" up-button_active")
-	}
-});
-
-
-
 $(document).ready(function(){
+	/*----------------------------
+			PRELAODER
+	-----------------------------*/
+  
+setTimeout(function() {	
+	$('#preloader').fadeOut(); 
+}, 1000);
+
+	/*----------------------------
+				OWL CAROUSEL INIT
+	-----------------------------*/
+
   $(".owl-carousel").owlCarousel({
 		items: 1,
 		autoplay: true,
@@ -18,10 +20,30 @@ $(document).ready(function(){
 		margin: 10
 	});
 
+	/*----------------------------
+			HAMBURGER TOGGLE
+	-----------------------------*/
+
 	$('.hamburger, .main-nav_list-item-link').click(function() {
 		$('.hamburger').toggleClass(' is-active');
 		$('.main-nav_list').toggleClass(' show')
 	});	
+
+	/*----------------------------
+			TO-TOP BUTTON
+	-----------------------------*/
+
+	$(window).scroll(function() {
+		if ( $(this).scrollTop() > $(this).height() ) {
+			$(".up-button").addClass(" up-button_active")
+		} else {
+			$(".up-button").removeClass(" up-button_active")
+		}
+	});
+
+	/*----------------------------
+			SMOOTH SCROLL
+	-----------------------------*/
 
 	$('a[href*="#"]')
 	// Remove links that don't actually link to anything
