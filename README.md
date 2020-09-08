@@ -1,4 +1,4 @@
-# Bicycle Web Site
+# Bicycle Website
 PSD to HTML practice, "Bicycle" site markup.
 
 Technology used: HTML5 CSS JQuery Sass
